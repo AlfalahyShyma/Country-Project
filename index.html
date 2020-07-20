@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Java selector</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body id="grad">
+
+    <div class="container">
+        <br>
+        <h1 class="h1">Welcome to my image viewer</h1><br>
+        <p class="p">select the country that you like:</p>
+
+        <select id="country" class="form-control">
+            <option >
+                -
+            </option>
+            <option value="yemen">
+                Yemen
+            </option>
+            <option value="egypt">
+                Egypt
+            </option>
+        </select>
+        
+        <p class="p">select the city that you like:</p>
+        <select id="cities" class="form-control">
+            
+
+        </select>
+        <div id="img-container" class="img-container">
+
+        </div>
+    </div>
+    <script>
+        var sanaImg = "<br><h4 class='h4'>Sana'a City</h4><br><img src='img/1s.jpg' class='rounded' width='304' height='236'><img src='img/2s.jpg' class='rounded' width='304' height='236'><img src='img/3s.jpg' class='rounded' width='304' height='236'></div>";
+        var ibbImg = "<br><h4 class='h4'>Ibb City</h4><br><img src='img/1b.jpg' class='rounded' width='304' height='236'><img src='img/2b.jpg' class='rounded' width='304' height='236'><img src='img/3b.jpg' class='rounded' width='304' height='236'>";
+        var cairoImg = "<br><h4 class='h4'>Cairo City</h4><br><img src='img/1c.jpg' class='rounded' width='304' height='236'><img src='img/2c.jpg' class='rounded' width='304' height='236'><img src='img/3c.jpg' class='rounded' width='304' height='236'>";
+        var sharmImg = "<br><h4 class='h4'>Sharm el sheekh City</h4><br><img src='img/1sh.jpg' class='rounded' width='304' height='236'><img src='img/2sh.jpg' class='rounded' width='304' height='236'><img src='img/3sh.jpg' class='rounded' width='304' height='236'>";
+        var yemenCities = "<br><option >-</option><option value='sanaa'>Sanaa</option><option value='ibb'>Ibb</option>";
+        var egyptCities = "<br><option >-</option><option value='cairo'>Cairo</option><option value='sharm'>sharm el sheekh</option>";
+        var countries = document.getElementById("country");
+        var cities = document.getElementById("cities");
+        var imgs = document.getElementById("img-container");
+        countries.addEventListener("change", function () {
+            if (countries.value == "yemen") {
+                cities.innerHTML = yemenCities;
+            }
+            else {
+                cities.innerHTML = egyptCities;
+            }
+        });
+
+        cities.addEventListener("change", function () {
+            if (cities.value == "sanaa") {
+                imgs.innerHTML = sanaImg;
+            }
+            else if (cities.value == "ibb") {
+                imgs.innerHTML = ibbImg;
+            }
+            else if (cities.value == "cairo") {
+                imgs.innerHTML = cairoImg;
+            }
+            else if (cities.value == "sharm") {
+                imgs.innerHTML = sharmImg;
+            }
+        });
+
+
+    </script>
+
+</body>
+
+</html>

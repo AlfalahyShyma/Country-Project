@@ -1,0 +1,24 @@
+body{
+    
+}
+
+.rounded{
+    margin-right: 5px;
+    margin-left: 5px;
+}
+.container{
+    height: 100vw;
+    background-color: deepskyblue; /* For browsers that do not support gradients */
+    background-image: linear-gradient(deepskyblue, rgb(31, 30, 31)); /* Standard syntax (must be last) */
+  }
+  .h1{
+      margin-top: 3vw;
+      color: ghostwhite;
+  }
+  .p{
+    color: ghostwhite;
+  }
+  .h4{
+    color: ghostwhite;
+    text-align: center;
+  }
